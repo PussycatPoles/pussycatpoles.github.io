@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -5,7 +6,7 @@ body {
   color: #2F2F2F;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Dancing Script', cursive;
   color: #7D26CD;
 }
@@ -13,9 +14,11 @@ h1, h2 {
 h1 {
   font-size: 2.5em;
 }
-
 h2 {
   font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
 }
 
 header {
@@ -39,42 +42,77 @@ header {
 .logo img {
   height: 60px;
   display: block;
-  border-radius: 12px; /* Adjust this value for more or less rounding */
+  border-radius: 12px;
 }
 
-nav a {
-  margin-left: 20px;
+.hamburger {
+  cursor: pointer;
+  display: block;
+  z-index: 11;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #2F2F2F;
+  margin: 5px 0;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #2F2F2F;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px;
+  transition: right 0.3s ease;
+  z-index: 10;
+}
+
+.nav-menu a {
+  color: #FDFDFD;
   text-decoration: none;
-  color: #2F2F2F;
   font-weight: bold;
+  margin: 10px 0;
 }
 
-nav a:hover {
+.nav-menu a:hover {
   color: #F472C0;
 }
 
-.hero {
+.nav-menu.active {
+  right: 0;
+}
+
+.hero, .about {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 4em 2em;
+}
+
+.hero {
   background-color: #FDD9E2;
 }
 
-.hero-text {
+.hero-text, .about-text {
   flex: 1 1 400px;
   max-width: 600px;
   padding: 20px;
 }
 
-.hero-image {
+.hero-image, .about img {
   flex: 1 1 300px;
   text-align: center;
   padding: 20px;
 }
 
-.hero img {
+.hero img, .about img {
   max-width: 100%;
   border-radius: 10px;
 }
@@ -97,26 +135,37 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-.about {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 4em 2em;
-  background-color: #FDFDFD;
-  max-width: 1200px;
+/* Contact form styling */
+form {
+  max-width: 500px;
   margin: auto;
-}
-
-.about img {
-  flex: 1 1 400px;
-  max-width: 100%;
-  margin-bottom: 20px;
+  padding: 20px;
+  background: #FDD9E2;
   border-radius: 10px;
 }
 
-.about-text {
-  flex: 1 1 400px;
-  padding: 20px;
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input[type="submit"] {
+  background-color: #7D26CD;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #F472C0;
 }
 
 @media (max-width: 768px) {
