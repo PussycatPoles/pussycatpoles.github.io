@@ -173,3 +173,9 @@ input[type="submit"]:hover {
     flex-direction: column;
   }
 }
+
+body.menu-open {
+  transform: translateX(-250px);
+  transition: transform 0.3s ease;
+  overflow-x: hidden;
+}
