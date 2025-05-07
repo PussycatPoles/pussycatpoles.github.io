@@ -7,7 +7,3 @@ document.addEventListener("DOMContentLoaded", function() {
     navMenu.classList.toggle("active");
   });
 });
-
-document.querySelector(".hamburger").addEventListener("click", () => {
-  document.body.classList.toggle("menu-open");
-});
