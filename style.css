@@ -1,0 +1,133 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FDFDFD;
+  color: #2F2F2F;
+}
+
+/* Typography */
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #7D26CD;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+/* Navigation */
+header {
+  background: #FDD9E2;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 1em 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8em;
+  color: #7D26CD;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #2F2F2F;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #F472C0;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 2em;
+  background-color: #FDD9E2;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-image {
+  flex: 1 1 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Button */
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 0.75em 1.5em;
+  background-color: #7D26CD;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #F472C0;
+  transform: scale(1.05);
+}
+
+/* About section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4em 2em;
+  background-color: #FDFDFD;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about img {
+  flex: 1 1 400px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 1 1 400px;
+  padding: 20px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero, .about {
+    flex-direction: column;
+  }
+}
