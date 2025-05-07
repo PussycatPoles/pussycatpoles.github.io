@@ -39,6 +39,7 @@ header {
 .logo img {
   height: 60px;
   display: block;
+  border-radius: 12px; /* Adjust this value for more or less rounding */
 }
 
 nav a {
